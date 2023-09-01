@@ -1,0 +1,27 @@
+.outros-pontos-meio {
+    justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+    .container-imagem {
+        display: none;
+    }
+
+    .cabecalho-input {
+        flex-direction: column;
+    }
+
+    .outros-pontos-container {
+        flex-direction: column;
+    }
+
+    .outros-pontos-meio, .outros-pontos-baixo {
+        width: auto;
+        height: auto;
+    }
+
+    .principal-container {
+        width: 100%;
+    }
+
+}

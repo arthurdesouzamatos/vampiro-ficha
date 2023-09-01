@@ -1,0 +1,13 @@
+@import './../../assets/resource/variaveis.scss';
+
+.botoes-Adicionar-Tirar {
+    width: 21rem;
+    height: 1.4rem;
+    display: flex;
+    text-align: center;
+}
+
+.bolinha {
+    cursor: pointer;
+    margin-left: $margin-default;
+}
