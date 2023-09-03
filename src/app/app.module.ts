@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PontosComponent } from './pontos/pontos.component';
 import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
 import { NavegacaoComponent } from './components/navegacao/navegacao.component';
+import { SquarePointsComponent } from './components/square-points/square-points.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { NavegacaoComponent } from './components/navegacao/navegacao.component';
     PontosComponent,
     CabecalhoComponent,
     NavegacaoComponent,
+    SquarePointsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+
 <div>
     <div class="container">
         <div class="d-flex justify-content-start">
@@ -7,7 +8,7 @@
                     <i class="bi bi-dash" *ngIf=" ehPermitidoDelPonto" (click)="apagarPonto()"></i>
                 </div>
                 
-                <div class="col-4"> {{titulo}}</div>
+                <div class="col-4"> </div>
                 
                 <div class="col-4">
                     <i class="bi bi-plus" *ngIf="ehPermitidoAddPonto" (click)="adicionarPonto()"></i>
@@ -15,9 +16,8 @@
 
             </div>
             <div class="">
-                <ng-template ngFor let-ponto [ngForOf]="pontos" let-i="index">
-                    <i (click)="selecionarBola(i); verificarPermissaoAddPonto(); verificarPermissaoDelPonto()" [ngClass]="ponto" class="bolinha"></i>
-                    <br *ngIf="(( i + 1 ) % 5) == 0">
+                <ng-template ngFor let-ponto [ngForOf]="squarePoints" let-i="index">
+                    <i (click)="selecionarQuadrado(i); verificarPermissaoAddPonto(); verificarPermissaoDelPonto()" [ngClass]="ponto" class="bolinha"></i>
                 </ng-template>
             </div>
         </div>

@@ -104,6 +104,6 @@ export class PontosComponent implements OnInit {
 export enum Preenchimento {
 
   BOLINHA_VAZIA = 'bi bi-circle',
-  BOLINHA_PREENCHIDA = 'bi bi-circle-fill',
+  BOLINHA_PREENCHIDA = 'bi bi-circle-fill'
 
 }
