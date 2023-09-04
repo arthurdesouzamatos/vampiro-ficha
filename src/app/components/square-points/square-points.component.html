@@ -1,25 +1,13 @@
-
 <div>
-    <div class="container">
-        <div class="d-flex justify-content-start">
-            <div class="botoes-Adicionar-Tirar row ">
-                
-                <div class="col-4">
-                    <i class="bi bi-dash" *ngIf=" ehPermitidoDelPonto" (click)="apagarPonto()"></i>
-                </div>
-                
-                <div class="col-4"> </div>
-                
-                <div class="col-4">
-                    <i class="bi bi-plus" *ngIf="ehPermitidoAddPonto" (click)="adicionarPonto()"></i>
-                </div>
-
-            </div>
-            <div class="">
-                <ng-template ngFor let-ponto [ngForOf]="squarePoints" let-i="index">
-                    <i (click)="selecionarQuadrado(i); verificarPermissaoAddPonto(); verificarPermissaoDelPonto()" [ngClass]="ponto" class="bolinha"></i>
-                </ng-template>
-            </div>
-        </div>
+    <div>
+        <p>{{nome}}</p>
     </div>
+
+    <div>
+        <ng-template ngFor let-ponto [ngForOf]="points" let-i="index">
+            <i (click)="selecionarQuadrado(i); " [ngClass]="ponto"></i>
+            <br *ngIf="(( i + 1 ) % 5) == 0">
+        </ng-template>
+    </div>
+
 </div>

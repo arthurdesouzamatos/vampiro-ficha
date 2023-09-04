@@ -9,90 +9,36 @@ import { Component, Input } from '@angular/core';
 })
 export class SquarePointsComponent {
 
-
   @Input()
-  ehAtributo: boolean = false;
 
-  @Input()  
-  public readonly LIMITE_MAXIMO = 10;
+  nome: string = "";
 
-  public readonly LIMITE_MINIMO = 5;
 
-  squarePoints: Array<PreenchimentoDoQuadrado> = [];
+  points: Array<Preencher> = [];
 
-  public ehPermitidoAddPonto = true;
 
-  public ehPermitidoDelPonto = true;
 
-  ngOnInit(): void {
-    if (this.ehAtributo) {
-       this.squarePoints = [PreenchimentoDoQuadrado.QUADRADO_VAZIO, PreenchimentoDoQuadrado.QUADRADO_VAZIO, PreenchimentoDoQuadrado.QUADRADO_VAZIO, PreenchimentoDoQuadrado.QUADRADO_VAZIO, PreenchimentoDoQuadrado.QUADRADO_VAZIO];
-    }
-      
-  }
-
-  public verificarPermissaoAddPonto() {
-    let devePermitirAddPonto;
-
-    if (devePermitirAddPonto) {
-      this.ehPermitidoAddPonto = true;
-      return;
-    }
-
-  }
-  
-  public verificarPermissaoDelPonto() {
-    let DevePermitirDelPonto;
-
-    if (DevePermitirDelPonto) {
-      this.ehPermitidoDelPonto = true;
-      return;
-    }
-
+  ngOnInit(): void {    
+    this.points = [Preencher.QUADRADO_VAZIO, Preencher.QUADRADO_VAZIO, Preencher.QUADRADO_VAZIO, Preencher.QUADRADO_VAZIO, Preencher.QUADRADO_VAZIO]
   }
 
   public selecionarQuadrado(posicaoQuadrado: number) {
-    let quadradoEstaVazio: boolean = this.squarePoints[posicaoQuadrado] == PreenchimentoDoQuadrado.QUADRADO_VAZIO;
+    let quadradoEstaVazio: boolean = this.points[posicaoQuadrado] == Preencher.QUADRADO_VAZIO;
 
-
-    if (posicaoQuadrado == 0 && this.ehAtributo) {
-      posicaoQuadrado = 1;
-    }
     if (quadradoEstaVazio) {
-      for (let index = 0; index <= posicaoQuadrado; index++) {
-        this.squarePoints[index] = PreenchimentoDoQuadrado.QUADRADO_PREENCHIDO;
+      for(let index = 0; index <= posicaoQuadrado; index++) {
+        this.points[index] = Preencher.QUADRADO_MARCADO
+      }
+    } else {
+      for (let index = this.points.length-1; index >= posicaoQuadrado; index--) {
+        this.points[index] = Preencher.QUADRADO_VAZIO;
       }
     }
-    else {
-      for (let index = this.squarePoints.length-1; index >= posicaoQuadrado; index--) {
-        this.squarePoints[index] = PreenchimentoDoQuadrado.QUADRADO_VAZIO;
-      }
-    }
   }
-
-  public adicionarPonto(): void {
-    let ehPontoLimiteMaximo:boolean = this.squarePoints.length >= this.LIMITE_MAXIMO;
-    if (ehPontoLimiteMaximo) {
-      return;
-    }
-
-    this.squarePoints.push(PreenchimentoDoQuadrado.QUADRADO_VAZIO);
-  }
-
-  public apagarPonto():void{
-    let ehPontoLimiteMinimo:boolean = this.squarePoints.length <= this.LIMITE_MINIMO;
-    if(ehPontoLimiteMinimo){
-      return;
-    }
-    this.squarePoints.pop();
-  }
-
 
 }
 
-export enum PreenchimentoDoQuadrado {
-
+export enum Preencher {
   QUADRADO_VAZIO = 'bi bi-square',
-  QUADRADO_PREENCHIDO = 'bi bi-x-square'
-
+  QUADRADO_MARCADO = 'bi bi-x-square'
 }

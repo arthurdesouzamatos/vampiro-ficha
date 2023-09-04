@@ -1,6 +1,11 @@
-.outros-pontos-meio {
-    justify-content: space-around;
+
+
+.status-principais {
+    text-align: center;
+    
 }
+
+
 
 @media (max-width: 650px) {
     .container-imagem {
@@ -11,11 +16,11 @@
         flex-direction: column;
     }
 
-    .outros-pontos-container {
+    .status-container {
         flex-direction: column;
     }
 
-    .outros-pontos-meio, .outros-pontos-baixo {
+    .status-principais, .status-gerais {
         width: auto;
         height: auto;
     }

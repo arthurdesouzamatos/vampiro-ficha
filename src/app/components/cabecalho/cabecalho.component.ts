@@ -12,7 +12,10 @@ export class CabecalhoComponent {
     
     }
   
+  
+    selecionarSquare() {
 
+    }
 
 
 }
