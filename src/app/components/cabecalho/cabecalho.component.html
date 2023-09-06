@@ -1,61 +1,106 @@
-<div class="row">
-    <div class="border border-dark col-3 container-imagem g-1 flex-fill"> 
+<div class="row principal-container">
+    <div class="border border-dark col-2 container-imagem g-1 flex-fill">
         teste
     </div>
 
-    <div class="container col-9 g-1 principal-container">
+    <div class="container col-9 g-1 ">
 
-        <div class="container">
-            <div class="row">
+        
+            <div class="row ">
                 <div class="border border-dark">
-                    <div class="mt-3 g-1">
-                        <div class="row row-xs-3 cabecalho-input">
 
-                            <div class="col col-xs-12 input-group input-group-lg p-0 ">
-                                <input class="form-control form-control-lg" type="text" placeholder="Nome"
-                                    aria-label=".form-control-lg example">
+                    <div class="row cabecalho-input">
+
+                        <div class="col-12 input-group input-group-lg p-0 ">
+                            <input class="form-control form-control-lg" type="text" placeholder="Nome"
+                                aria-label=".form-control-lg example">
+
+                        </div>
+
+                        <div class="col-12 input-group input-group-lg p-0 ">
+                            <input class="form-control form-control-lg" type="text" placeholder="Clã"
+                                aria-label=".form-control-lg example">
+
+                        </div>
+
+                        <div class="col-12 input-group input-group-lg p-0">
+                            <input class="form-control form-control-lg" type="text" placeholder="Predador"
+                                aria-label=".form-control-lg example">
+
+                        </div>
+
+                    </div>
+                    <div class="container-todos-status">
+                        <div class="status-container row">
+
+                            <div class=" col-4">
+
+                                <div class="mt-2 input-status">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Nome"
+                                        aria-label=".form-control-lg example">
+                                </div>
+
+                                <div class="border border-dark mt-2 text-center status-principais">
+                                    <vampiro-square-points [nome]="'Vitalidade'"></vampiro-square-points>
+                                </div>
+
 
                             </div>
 
-                            <div class="col col-xs-12 input-group input-group-lg p-0 ">
-                                <input class="form-control form-control-lg" type="text" placeholder="Clã"
-                                    aria-label=".form-control-lg example">
+                            <div class="col-4">
 
+                                <div class="mt-2 input-status">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Clã"
+                                        aria-label=".form-control-lg example">
+                                </div>
+
+                                <div class="border border-dark mt-2 text-center status-principais">
+                                    <vampiro-square-points [nome]="'Força de Vontade'"></vampiro-square-points>
+                                </div>
                             </div>
 
-                            <div class="col col-xs-12 input-group input-group-lg p-0">
-                                <input class="form-control form-control-lg" type="text" placeholder="Predador"
-                                    aria-label=".form-control-lg example">
+
+                            <div class="col-4">
+
+                                <div class="mt-2 input-status">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Predador"
+                                        aria-label=".form-control-lg example">
+                                </div>
+                                <div class="border border-dark mt-2 text-center status-principais">
+                                    <vampiro-square-points [nome]="'Humanidade'"></vampiro-square-points>
+                                </div>
 
                             </div>
 
                         </div>
+
+                        <div class=" row  status-gerais-container">
+
+                            <div class="col-2 border border-dark m-1 status-gerais">
+                                <div>
+                                    <p>Exp</p>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" aria-label="" class="form-control">
+                                    <div>
+                                        <h4>/</h4>
+                                    </div>
+                                    <input type="text" aria-label="" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-2 border border-dark m-1 status-gerais"> teste </div>
+
+                            <div class="col-2 border border-dark m-1 status-gerais"> teste </div>
+
+                            <div class="col-2 border border-dark m-1 status-gerais"> teste </div>
+
+                        </div>
                     </div>
 
-                    <div class=" g-3 p-2 m-2 row-1 row justify-content-around status-container">
-
-                        <div class="col-3 border border-dark m-1 status-principais"><vampiro-square-points [nome] = "'Vitalidade'"></vampiro-square-points> </div>
-
-                        <div class="col-3 border border-dark m-1 status-principais"><vampiro-square-points [nome] = "'Força de Vontade'"></vampiro-square-points> </div>
-
-                        <div class="col-3 border border-dark m-1 status-principais"><vampiro-square-points [nome] = "'Humanidade'"></vampiro-square-points> </div>
-
-                    </div>
-
-                    <div class=" g-3 p-2 m-2 row justify-content-around status-container">
-
-                        <div class="col-2 border border-dark m-1 status-gerais"> teste </div>
-
-                        <div class="col-2 border border-dark m-1 status-gerais"> teste </div>
-
-                        <div class="col-2 border border-dark m-1 status-gerais"> teste </div>
-
-                        <div class="col-2 border border-dark m-1 status-gerais"> teste </div>
-
-                    </div>
 
                 </div>
             </div>
-        </div>
+        
     </div>
 </div>
